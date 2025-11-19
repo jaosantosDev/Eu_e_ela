@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu Amor ❤️</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #fce4ec; 
+            color: #4a4a4a;
+            min-height: 100vh;
+            text-align: center; /* Centraliza todo o texto por padrão */
+        }
+
+        /* Estrutura de Layout com CSS Grid */
+        #main-layout {
+            display: grid;
+            /* Define 3 colunas: 10% lateral, 80% central, 10% lateral */
+            grid-template-columns: 10% 80% 10%; 
+            min-height: 100vh;
+        }
+
+        /* --- Estilo da Coluna Central (Carrossel e Poema) --- */
+        #center-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* --- ESTILO DO POEMA --- */
+        #poema-container {
+            width: 95%;
+            max-width: 600px;
+            margin-bottom: 30px; /* Espaço entre o poema e o carrossel */
+            padding: 20px;
+            background-color: #fff0f5; /* Fundo suave para o poema */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 105, 180, 0.2);
+        }
+
+        #poema-container p {
+            font-family: 'Dancing Script', cursive; /* Aplica a fonte bonita */
+            font-size: 1.5em;
+            line-height: 1.6;
+            color: #d63384; /* Um rosa forte para o texto */
+            white-space: pre-wrap; /* Mantém as quebras de linha que você digitar no HTML */
+            margin: 10px 0;
+        }
+
+        .poema-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .poema-heart {
+            color: #ff69b4; /* Coração rosa choque */
+            font-size: 1.2em;
+            margin: 0 10px;
+            animation: pulse 1.5s infinite; /* Adiciona um efeito de pulsar */
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* --- Estilo do Carrossel (mantido do código anterior) --- */
+        #carousel-container {
+            width: 95%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(255, 105, 180, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff69b4; 
+            margin-bottom: 25px;
+            font-size: 2.5em;
+        }
+
+        #carousel-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 3px solid #ff69b4;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #carousel-caption {
+            font-size: 1.4em;
+            font-style: italic;
+            font-weight: 500;
+            color: #6a6a6a;
+            height: 30px;
+            margin-bottom: 25px;
+        }
+
+        .carousel-controls button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 25px; 
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        .carousel-controls button:hover {
+            background-color: #e64f9f;
+        }
+        
+        .carousel-controls button:active {
+            transform: scale(0.98);
+        }
+
+        /* --- Estilo das Colunas Laterais (Animação) --- */
+        .side-column {
+            background-color: #ffe0e9; 
+            overflow: hidden; 
+            position: relative; 
+        }
+        
+        .photo-strip {
+            position: absolute;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            animation: scroll-down 30s linear infinite; 
+        }
+
+        .side-photo {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            margin-bottom: 5px; 
+            border-radius: 5px;
+        }
+
+        @keyframes scroll-down {
+            0% { transform: translateY(0%); } 
+            100% { transform: translateY(-100%); } 
+        }
+
+        /* --- Responsividade (Para Celulares) --- */
+        @media (max-width: 768px) {
+            #main-layout {
+                grid-template-columns: 100%;
+            }
+            .side-column {
+                display: none; 
+            }
+            #poema-container p {
+                 font-size: 1.2em; /* Diminui um pouco a fonte no celular */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="main-layout">
+        <div id="left-column" class="side-column">
+             <div class="photo-strip">
+                <img class="side-photo" src="1.jpg" alt="Foto lateral 1"><img class="side-photo" src="2.jpg" alt="Foto lateral 2"><img class="side-photo" src="3.jpg" alt="Foto lateral 3"><img class="side-photo" src="5.jpg" alt="Foto lateral 4"><img class="side-photo" src="6.jpg" alt="Foto lateral 5">
+                <img class="side-photo" src="beijo.jpg" alt="Foto lateral 1"><img class="side-photo" src="8.jpg" alt="Foto lateral 2"><img class="side-photo" src="9.jpg" alt="Foto lateral 3"><img class="side-photo" src="10.jpg" alt="Foto lateral 4"><img class="side-photo" src="11.jpg" alt="Foto lateral 5">
+            </div>
+        </div>
+
+        <div id="center-content">
+            
+            <div id="poema-container">
+                <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>Minha Manuela, minha razão de viver,</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>Minha vida inteira, envolve você,</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>Cada momento, cada sorriso, fico bobo eu admito,</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>Nao sou o melhor, mas por você eu tento ser</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                 <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>No seu abraço encontro, a paz que preciso,</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                 <div class="poema-line">
+                    <span class="poema-heart">❤️</span>
+                    <p>No seu sorriso a calma que eu aprecio.</p>
+                    <span class="poema-heart">❤️</span>
+                </div>
+                </div>
+            <div id="carousel-container">
+                <h1>Nosso 1 ano desde que nos conhecemos!</h1>
+                <img id="carousel-image" src="" alt="Imagem do carrossel">
+                <p id="carousel-caption">Carregando...</p>
+                
+                <div class="carousel-controls">
+                    <button onclick="changeSlide(-1)">⬅️ Anterior</button>
+                    <button onclick="changeSlide(1)">Próximo ➡️</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-column" class="side-column">
+             <div class="photo-strip" style="animation-duration: 35s; animation-direction: reverse;">
+                 <img class="side-photo" src="11.jpg" alt="Foto lateral 6"><img class="side-photo" src="12.jpg" alt="Foto lateral 7"><img class="side-photo" src="13.jpg" alt="Foto lateral 8"><img class="side-photo" src="14.jpg" alt="Foto lateral 9"><img class="side-photo" src="15.jpg" alt="Foto lateral 10">
+                <img class="side-photo" src="16.jpg" alt="Foto lateral 6"><img class="side-photo" src="beijo.jpg" alt="Foto lateral 7"><img class="side-photo" src="beijo 2.jpg" alt="Foto lateral 8"><img class="side-photo" src="comeco.jpg" alt="Foto lateral 9"><img class="side-photo" src="beijo 3.jpg" alt="Foto lateral 10">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =======================================================
+        // ⚠️ INFORMAÇÕES DO CARROSSEL CENTRAL (Edite aqui suas fotos) ⚠️
+        // =======================================================
+        const slides = [
+            { src: 'primeiro.jpg', name: 'Seu olhar é tudo pra mim!' },
+            { src: '17.jpg', name: 'Nunca escondemos que nós nos amamos' },
+            { src: 'MOO.jpg', name: 'Nossos momentos na praia sao incriveis. ❤️' },
+            { src: '4.jpg', name: 'Eu amo muito voce minha princesa. ❤️' },
+            { src: 'segundo.jpg', name: 'Nosso começo é lindo igual nosso futuro. ❤️' },
+        ];
+
+        let currentIndex = 0;
+        const imgElement = document.getElementById('carousel-image');
+        const captionElement = document.getElementById('carousel-caption');
+
+        function showSlide(index) {
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const currentSlide = slides[currentIndex];
+            imgElement.style.opacity = 0;
+
+            setTimeout(() => {
+                imgElement.src = currentSlide.src;
+                captionElement.textContent = currentSlide.name;
+                imgElement.style.opacity = 1;
+            }, 500); 
+        }
+
+        function changeSlide(n) {
+            showSlide(currentIndex + n);
+        }
+
+        showSlide(currentIndex);
+    </script>
+
+</body>
+</html>
